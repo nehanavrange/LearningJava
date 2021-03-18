@@ -7,6 +7,7 @@ Table of contents
 <!--ts-->
    * [Collections Framework](#collections-framework)
    * [Serialization](#serialization)
+   * [MultiThreading](#multithreading)
 
 <!--te-->
 
