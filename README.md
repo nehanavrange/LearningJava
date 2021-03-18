@@ -39,25 +39,25 @@ There are states in thread life cycle in java new, runnable, running, wait, slee
 </p>
 
 
-*1. New: 
+* 1. New: 
 The thread is in new state if you create an instance of Thread class.
 Ex: Thread t= new Thread(); // using new keyword we are creating instance of thread class
 
-*2. Runnable: 
+* 2. Runnable: 
 The thread is in runnable state after invocation of start() method.
 
 -- means thread is in ready to run state and not in running state.
 Ex: t.start(); //calling start() method
 
-*3. Running: 
+* 3. Running: 
 The thread is in running state means the thread scheduler has selected it for an execution.
 
 Ex: void run(){}; // goes to run() method for execution
 
-*4. Terminate:
+* 4. Terminate:
 When thread completed its tasks then it will go into terminated or dead state.
 
-*5. Blocked:(waiting and sleeping)
+* 5. Blocked:(waiting and sleeping)
 When thread call wait() then it will go into blocked state.
 Whenever blocked state thread get notify/notifyAll signal it will go into a runnable state.
 When thread call sleep() then it will go into blocked state for a specified time.
