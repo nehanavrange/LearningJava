@@ -11,6 +11,72 @@ Table of contents
 
 <!--te-->
 
+MultiThreading
+==============
+Multithreading is a process of executing multiple threads simultaneously.
+
+Process
+-------
+* A program in execution is referred as process.
+* A process consists of multiple threads.
+* A process has its own address space.
+
+Thread
+------
+* A thread is a lightweight subprocess.
+* Threads share the same address space.
+* Threads are independent. 
+* If there occurs exception in one thread, it doesn't affect other threads. 
+  because it uses a shared memory area.
+
+Life cycle of a Thread
+----------------------
+The life cycle of the thread in java is controlled by JVM. 
+There are states in thread life cycle in java new, runnable, running, wait, sleep and terminated.
+
+<p align="center">
+  <img width="460" height="300" src=".images/thread-lifecycle.jpg">
+</p>
+
+
+1.New: The thread is in new state if you create an instance of Thread class but before the invocation of start() method.
+------
+Ex: Thread t= new Thread(); // using new keyword we are creating instance of thread class
+
+2.Runnable: The thread is in runnable state after invocation of start() method.
+-----------
+-- means thread is in ready to run state not in running state.
+Ex: t.start(); //calling start() method
+
+3.Running: The thread is in running state if the thread scheduler has selected it for execution.
+----------
+Ex: void run(){}; // goes to run() method for execution
+
+4.Wait:
+-------
+
+5.Terminate: A thread is in terminated or dead state when its run() method exits.
+------------
+
+**How to create thread:
+There are two ways to create a thread:
+
+1. By extending Thread class
+-- Thread class extends Object class and implements Runnable interface.
+
+2. By implementing Runnable interface.
+
+
+
+
+
+
+
+
+
+
+
+
 Collections Framework
 ===================
 
