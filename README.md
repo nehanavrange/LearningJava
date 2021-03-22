@@ -69,14 +69,7 @@ There are two ways to create a thread:
 1. By extending Thread class
 -- Thread class extends Object class and implements Runnable interface.
 
-2. By implementing Runnable interface.
--- The Runnable interface should be implemented by any class.
-   But their instance should be executed by a thread.
-   Runnable interface have only one method named run().
-   
-*  public void run(): is used to perform action for a thread.
-
-1) Java Thread Example by extending Thread class
+* Java Thread Example by extending Thread class
 ```
 class CreateThread extends Thread{  
 public void run(){  
@@ -88,12 +81,67 @@ t1.start();
  }  
 }   
 ```
+2. By implementing Runnable interface.
+-- The Runnable interface should be implemented by any class.
+   But their instance should be executed by a thread.
+   Runnable interface have only one method named run().
+   
+*  public void run(): is used to perform action for a thread.
 
+* Java Thread Example by implementing Runnable interface
+```
+class CreateThread implements Runnable{  
+public void run(){  
+System.out.println("thread is running...");  
+}  
+  
+public static void main(String args[]){  
+CreateThread m1=new CreateThread();  
+Thread t1 =new Thread(m1);  
+t1.start();  
+ }  
+}  
+```
 
+Thread Scheduler in Java
+------------------------
+It is a part of JVM that decides which thread should be run
+It is a controller of threads.
 
+* Imp points:
+------------
+-- we cannot start a thread twice.
+throws exception IllegalThreadStateException
+```
+public class ThreadTwice extends Thread{  
+ public void run(){  
+   System.out.println("running...");  
+ }  
+ public static void main(String args[]){  
+  ThreadTwice t1=new ThreadTwice();  
+  t1.start();  
+  t1.start();  
+ }  
+ 
+ o/p:
+ running
+ Exception in thread "main" java.lang.IllegalThreadStateException
+ ```
+-- we cannot call run() method directly instead start() method.
+because it is not coming from Thread class. So, that method consider as normal run() method
+ ```
+class CallRun extends Thread{  
+ public void run(){  
+   System.out.println("running...");  
+ }  
+ public static void main(String args[]){  
+  CallRun1 t1=new CallRun1();  
+  t1.run();//fine, but does not start a separate call stack  
+ }  
+}  
 
-
-
+Output:running...
+ ```
 
 
 
