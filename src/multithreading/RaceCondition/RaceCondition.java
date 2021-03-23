@@ -1,40 +1,31 @@
-package multithreading.synchronizationblock;
+package multithreading.RaceCondition;
 
-
+// not giving proper output without synchronization
 class Account
 {
 	int balance;
 	public Account(int balance) {
-		// TODO Auto-generated constructor stub
+
 		this.balance=balance;
 	}
 
 	public void deposit(int amount)
 	{
-		synchronized (this) {
-			int temp=balance;
-			balance=temp+amount;	
-		}
-		
-		System.out.println("");
+		int temp=balance;
+		balance=temp+amount;
 	}
 
-	public  void withdraw(int amount)
+	public void withdraw(int amount)
 	{
-		synchronized (this) {
-			int temp=balance;
-			balance=temp-amount;
-			
-		}
-
-		System.out.println("");
+		int temp=balance;
+		balance=temp-amount;
 	}
 }
 
 class ATMDepositor extends Thread{
 	Account account;
 	public ATMDepositor(Account account) {
-		// TODO Auto-generated constructor stub
+
 		this.account=account;
 	}
 	@Override
@@ -50,7 +41,7 @@ class ATMDepositor extends Thread{
 class ATMWithrawl extends Thread{
 	Account account;
 	public ATMWithrawl(Account account) {
-		// TODO Auto-generated constructor stub
+
 		this.account=account;
 	}
 	@Override
@@ -63,7 +54,7 @@ class ATMWithrawl extends Thread{
 	}
 }
 
-public class RaceConditionSolutionUsingSync {
+public class RaceCondition {
 	public static void main(String[] args) throws InterruptedException {
 		Account suyogacc = new Account(1000);
 		ATMDepositor t1 = new ATMDepositor(suyogacc);
@@ -75,7 +66,7 @@ public class RaceConditionSolutionUsingSync {
 		t1.join();
 		t2.join();
 
-		System.out.println("Final amount is -"+ suyogacc.balance);
+		System.out.println("Final amount is :"+ suyogacc.balance);
 
 
 	}

@@ -33,11 +33,11 @@ class Account
 
 
 
-public class RaceConditionSolutionUsingSync {
+public class RaceConditionSolutionUsingSyncAnony {
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		Account suyogacc = new Account(1000);
-		
+
 		Thread t1 = new Thread() {
 			@Override
 			public void run() {

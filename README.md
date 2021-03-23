@@ -142,6 +142,62 @@ class CallRun extends Thread{
 
 Output:running...
  ```
+ 
+Synchronization in Java:
+------------------------
+--> controlling the access of multiple threads to any shared resource.
+--> without synchronization RaceConditon will occur.
+    see example: multithreading.RaceCondition code  
+
+The synchronization is mainly used to
+
+1. To prevent thread interference.
+2. To prevent consistency problem.
+
+Thread Synchronization:
+-----------------------
+There are two types of thread synchronization
+mutual exclusive and inter-thread communication.
+
+Mutual Exclusive:
+-----------------
+preventing threads from interfering with one another while sharing data. 
+This can be done by three ways in java:
+1. Synchronized method:
+Synchronized method is used to lock an object for any shared resource.
+When a thread invokes a synchronized method, 
+it automatically acquires the lock for that object and releases it when the thread completes its task.
+
+2. Synchronized block:
+Synchronized block can be used to perform synchronization on any specific resource of the method.
+Suppose you have 100 lines of code in your method, but you want to synchronize only 8 lines,
+you can use synchronized block.
+
+3. static synchronization.
+
+
+Cooperation (Inter-thread communication in java)
+------------------------------------------------
+wait(),notify() and notifyAll():
+
+These methods are allowed for inter-thread communication.
+Inter-thread communication allowing synchronized threads to communicate with each other.
+It is implemented by following methods of Object class:
+
+* wait():
+waiting thread goes to blocked state that means it releases the lock and wait until either another thread invokes notify() / notifyAll() method
+for this object or a specified amount of time has elapsed.
+wait() method should be called from synchronized method only otherwise it will throw exception "IllegalMonitorStateException".
+
+* notify():
+wake up signal 
+It gives signal to waiting thread and that thread goes to runnable state for execution.
+At a time only one thread is chosen to awakened.
+
+* notifyAll():
+It is also wake up signal.
+It gives signal to all waiting threads and that threads goes to runnable state for execution.
+At a time all waited threads are chosen to awakened. 
 
 
 

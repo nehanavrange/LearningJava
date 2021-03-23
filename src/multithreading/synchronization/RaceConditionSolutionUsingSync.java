@@ -5,7 +5,7 @@ class Account
 {
 	int balance;
 	public Account(int balance) {
-		// TODO Auto-generated constructor stub
+		
 		this.balance=balance;
 	}
 

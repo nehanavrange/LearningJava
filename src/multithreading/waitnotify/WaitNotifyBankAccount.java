@@ -1,92 +1,93 @@
 package multithreading.waitnotify;
 
-
+// Inter-thread communication in synchronization using wait(), 
+// notify/notifyAll() methods
 class Account
 {
 	int balance;
 	public Account(int balance) {
-		// TODO Auto-generated constructor stub
 		this.balance=balance;
 	}
 
 	public synchronized void  deposit(int amount)
 	{
-	    
+		System.out.println("going to deposit..."); 
 		int temp=balance;
 		balance=temp+amount;
 		if(balance>0) {
-			notify();
+			notifyAll();
 			System.out.println("Wake up from blocking/waiting state");
+
 		}
+		System.out.println("deposite amt:"+amount);
+		System.out.println("deposit completed... ");  
+
+		System.out.println("total balance:"+balance);
 	}
 
-	public void withdraw(int amount) 
+	public synchronized void withdraw(int amount) 
 	{
-		
-		int temp=balance;
-		if(temp<=0) {
-			System.out.println("Balance is not sufficient, Please wait while balance get diposited");
+		System.out.println("going to withdraw...");
+		int temp=this.balance;
+		if(temp<amount) {
+			System.out.println("Balance is insufficient, Please wait while balance get deposited");
 			try {
 				wait();
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+
+				System.out.println("Exception");
 			}
 		}
-		balance=temp-amount;
+		balance=temp-amount;  
+		System.out.println("withdraw amt:"+amount);
+		System.out.println("withdraw completed..."); 
+		System.out.println("total balance:"+balance);
+
 	}
 }
 
 class ATMDepositor extends Thread{
 	Account account;
 	public ATMDepositor(Account account) {
-		// TODO Auto-generated constructor stub
+		
 		this.account=account;
 	}
 	@Override
 	public void run() {
-
-		//for (int i = 0; i < 2; i++) {
-			account.deposit(1000);
-
-		//}
+		account.deposit(1000);		
 	}
 }
 
 class ATMWithrawl extends Thread{
 	Account account;
 	public ATMWithrawl(Account account) {
-		// TODO Auto-generated constructor stub
+		
 		this.account=account;
 	}
 	@Override
 	public void run() {
-
-		//for (int i = 0; i < 2; i++) {
-			account.withdraw(1000);
-
-		//}
+		account.withdraw(1000);
 	}
 }
 
 public class WaitNotifyBankAccount {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		Account suyogacc = new Account(0);
 		ATMDepositor t1 = new ATMDepositor(suyogacc);
 		ATMWithrawl t2 = new ATMWithrawl(suyogacc);
-	
+		ATMDepositor t3 = new ATMDepositor(suyogacc);
+		ATMWithrawl t4 = new ATMWithrawl(suyogacc);
 		t2.start();
-		//Thread.sleep(500);
-        t1.start();
+		t4.start();
 
-		try {
-			t1.join();
-			t2.join();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		Thread.sleep(2);
+		t1.start();
+		t3.start();
+
+		t1.join();
+		t2.join();t3.join();
+		t4.join();
+
 
 		System.out.println("Final amount is :"+ suyogacc.balance);
 

@@ -1,4 +1,5 @@
-package multithreading.dummy.test;
+package multithreading.synchronizationblock;
+
 
 class Account
 {
@@ -10,14 +11,23 @@ class Account
 
 	public void deposit(int amount)
 	{
-		int temp=balance;
-		balance=temp+amount;
+		synchronized (this) {
+			int temp=balance;
+			balance=temp+amount;	
+		}
+
+		System.out.println("");
 	}
 
-	public void withdraw(int amount)
+	public  void withdraw(int amount)
 	{
-		int temp=balance;
-		balance=temp-amount;
+		synchronized (this) {
+			int temp=balance;
+			balance=temp-amount;
+
+		}
+
+		System.out.println("");
 	}
 }
 
@@ -53,7 +63,7 @@ class ATMWithrawl extends Thread{
 	}
 }
 
-public class RaceCondition {
+public class RaceConditionSolutionUsingSyncBlock {
 	public static void main(String[] args) throws InterruptedException {
 		Account suyogacc = new Account(1000);
 		ATMDepositor t1 = new ATMDepositor(suyogacc);
