@@ -31,7 +31,8 @@ Thread
 
 Life cycle of a Thread
 ----------------------
-The life cycle of the thread in java is controlled by JVM. 
+The life cycle of the thread in java is controlled by JVM.
+ 
 There are states in thread life cycle in java new, runnable, running, wait, sleep and terminated.
 
 <p align="center">
@@ -40,33 +41,45 @@ There are states in thread life cycle in java new, runnable, running, wait, slee
 
 
 1. New: 
+
 The thread is in new state if you create an instance of Thread class.
+
 Ex: Thread t= new Thread(); // using new keyword we are creating instance of thread class
 
 2. Runnable: 
+
 The thread is in runnable state after invocation of start() method.
 
 -- means thread is in ready to run state and not in running state.
+
 Ex: t.start(); //calling start() method
 
 3. Running: 
+
 The thread is in running state means the thread scheduler has selected it for an execution.
 
 Ex: void run(){}; // goes to run() method for execution
 
 4. Terminate:
+
 When thread completed its tasks then it will go into terminated or dead state.
 
 5. Blocked:(waiting and sleeping)
+
 When thread call wait() then it will go into blocked state.
+
 Whenever blocked state thread get notify/notifyAll signal it will go into a runnable state.
+
 When thread call sleep() then it will go into blocked state for a specified time.
+
 When that time elapsed it will go again into runnable state.
 
 How to create thread:
+---------------------
 There are two ways to create a thread:
 
 1. By extending Thread class
+
 -- Thread class extends Object class and implements Runnable interface.
 
 * Java Thread Example by extending Thread class
@@ -81,9 +94,13 @@ t1.start();
  }  
 }   
 ```
+
 2. By implementing Runnable interface.
+
 -- The Runnable interface should be implemented by any class.
+
    But their instance should be executed by a thread.
+   
    Runnable interface have only one method named run().
    
 *  public void run(): is used to perform action for a thread.
@@ -105,13 +122,15 @@ t1.start();
 
 Thread Scheduler in Java
 ------------------------
-It is a part of JVM that decides which thread should be run
+It is a part of JVM that decides which thread should be run.
 It is a controller of threads.
 
 * Imp points:
-------------
--- we cannot start a thread twice.
+
+--> we cannot start a thread twice.
+
 throws exception IllegalThreadStateException
+
 ```
 public class ThreadTwice extends Thread{  
  public void run(){  
@@ -127,7 +146,8 @@ public class ThreadTwice extends Thread{
  running
  Exception in thread "main" java.lang.IllegalThreadStateException
  ```
--- we cannot call run() method directly instead start() method.
+--> we cannot call run() method directly instead start() method.
+
 because it is not coming from Thread class. So, that method consider as normal run() method
  ```
 class CallRun extends Thread{  
@@ -146,34 +166,47 @@ Output:running...
 Synchronization in Java:
 ------------------------
 --> controlling the access of multiple threads to any shared resource.
+
 --> without synchronization RaceConditon will occur.
-    see example: multithreading.RaceCondition code  
+
+    see example: multithreading.RaceCondition source code in src folder
 
 The synchronization is mainly used to
 
 1. To prevent thread interference.
+
 2. To prevent consistency problem.
 
 Thread Synchronization:
 -----------------------
 There are two types of thread synchronization
+
 mutual exclusive and inter-thread communication.
 
 Mutual Exclusive:
 -----------------
-preventing threads from interfering with one another while sharing data. 
+preventing threads from interfering with one another while sharing data.
+ 
 This can be done by three ways in java:
+
 1. Synchronized method:
+
 Synchronized method is used to lock an object for any shared resource.
-When a thread invokes a synchronized method, 
+
+When a thread invokes a synchronized method,
 it automatically acquires the lock for that object and releases it when the thread completes its task.
 
+ see example: multithreading.synchronization source code in src folder
+ 
 2. Synchronized block:
+
 Synchronized block can be used to perform synchronization on any specific resource of the method.
+
 Suppose you have 100 lines of code in your method, but you want to synchronize only 8 lines,
 you can use synchronized block.
 
 3. static synchronization.
+
 
 
 Cooperation (Inter-thread communication in java)
@@ -181,22 +214,31 @@ Cooperation (Inter-thread communication in java)
 wait(),notify() and notifyAll():
 
 These methods are allowed for inter-thread communication.
+
 Inter-thread communication allowing synchronized threads to communicate with each other.
+
 It is implemented by following methods of Object class:
 
 * wait():
+
 waiting thread goes to blocked state that means it releases the lock and wait until either another thread invokes notify() / notifyAll() method
 for this object or a specified amount of time has elapsed.
+
 wait() method should be called from synchronized method only otherwise it will throw exception "IllegalMonitorStateException".
 
 * notify():
 wake up signal 
+
 It gives signal to waiting thread and that thread goes to runnable state for execution.
+
 At a time only one thread is chosen to awakened.
 
 * notifyAll():
+
 It is also wake up signal.
+
 It gives signal to all waiting threads and that threads goes to runnable state for execution.
+
 At a time all waited threads are chosen to awakened. 
 
 
