@@ -196,7 +196,7 @@ Synchronized method is used to lock an object for any shared resource.
 When a thread invokes a synchronized method,
 it automatically acquires the lock for that object and releases it when the thread completes its task.
 
- see example: multithreading.synchronization source code in src folder
+ refer example: multithreading.synchronization source code in src folder
  
 2. Synchronized block:
 
@@ -251,23 +251,23 @@ Collections Framework
 Iterator
 --------
 root interface , used to iterate to forward direction.
-hasnext()
+hasNext()
 next()
 remove()
-through iterable method we get the reference of hasnext & next
+through Iterable method we get the reference of hasNext & next
 
 
 List
 ----
 * Stores elements in indexed approach
-* can add duplicate elements (supports redudancy)
+* can add duplicate elements (supports redundancy)
 
 * ArryList 
     * ArrayList is implemented as a resizable array.
     * As more elements are added to ArrayList, its size is increased dynamically.
     * It's elements can be accessed directly by using the get and set methods, since ArrayList is essentially an array.
 
-* Linkedlist
+* LinkedlList
     * LinkedList is implemented as a double linked list. 
     * Its performance on add and remove is better than Arraylist, but worse on get and set methods. 
     * Single vs double linked list 
@@ -275,7 +275,7 @@ List
          * Double Linked List -  implement stacks as well as heaps and binary trees.
 
 * Vector
-    * similar to Arraylist , but vector is synchronized.
+    * similar to ArrayList , but vector is synchronized.
 
 * Queue
     * Will sort the data
@@ -289,6 +289,6 @@ List
 * Set
     * data is unique, data is unordered due to hashing
     * data is being added is not indexed
-    * basically we get the hashcode of which we added
+    * basically we get the hashCode of which we added
 
 **Performance of tree set slower since it takes time for sorting the data.**
