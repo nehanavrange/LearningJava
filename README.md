@@ -85,13 +85,15 @@ There are two ways to create a thread:
 * Java Thread Example by extending Thread class
 ```
 class CreateThread extends Thread{  
-public void run(){  
-System.out.println("thread is running...");  
-}  
-public static void main(String args[]){  
-CreateThread t1=new CreateThread();  
-t1.start();  
- }  
+	
+	public void run(){  
+		System.out.println("thread is running...");  
+	}  
+	
+	public static void main(String args[]){  
+		CreateThread t1=new CreateThread();  
+		t1.start();  
+ 	}  
 }   
 ```
 
