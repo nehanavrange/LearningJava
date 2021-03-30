@@ -1,5 +1,6 @@
 package multithreading.usingLockMethods;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -7,18 +8,21 @@ class Account
 {
 	int balance;
 	Lock lock= new ReentrantLock();
-	public Account(int balance) {
+	 Condition locknewcondition = lock.newCondition();
+	 
+	 public Account(int balance) {
 		this.balance=balance;
 	}
 
-	public  void  deposit(int amount)
+	public  void  deposit(int amount) throws InterruptedException
 	{
 		lock.lock();
 		System.out.println("going to deposit..."); 
 		int temp=balance;
 		balance=temp+amount;
 		if(balance>0) {
-		   notifyAll();
+		    
+			locknewcondition.signalAll();
 			System.out.println("Wake up from blocking/waiting state");
 
 		}
@@ -30,21 +34,17 @@ class Account
 		lock.unlock();
 	}
 
-	public void withdraw(int amount) 
+	public void withdraw(int amount) throws InterruptedException 
 	{
 		lock.lock();
 		System.out.println("going to withdraw...");
 		int temp=this.balance;
 		if(temp<amount) {
 			System.out.println("Balance is insufficient, Please wait while balance get deposited");
-			try {
-				wait();
-			} catch (InterruptedException e) {
-
-				System.out.println("Exception");
-			}
+			//wait();
+			locknewcondition.await();
 		}
-		balance=temp-amount;  
+		balance=this.balance-amount;  
 		
 		System.out.println("withdraw amt:"+amount);
 		System.out.println("withdraw completed..."); 
@@ -61,7 +61,12 @@ class ATMDepositor extends Thread{
 	}
 	@Override
 	public void run() {
-		account.deposit(1000);		
+		try {
+			account.deposit(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 }
 
@@ -73,7 +78,12 @@ class ATMWithrawl extends Thread{
 	}
 	@Override
 	public void run() {
-		account.withdraw(1000);
+		try {
+			account.withdraw(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
 
@@ -84,15 +94,17 @@ public class LockMethodsBankAccount {
 		ATMWithrawl t2 = new ATMWithrawl(suyogacc);
 		ATMDepositor t3 = new ATMDepositor(suyogacc);
 		ATMWithrawl t4 = new ATMWithrawl(suyogacc);
+		
 		t2.start();
 		t4.start();
 
-		Thread.sleep(2);
+		Thread.sleep(5000);
 		t1.start();
 		t3.start();
 
 		t1.join();
-		t2.join();t3.join();
+		t2.join();
+		t3.join();
 		t4.join();
 
 

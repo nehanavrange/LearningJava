@@ -107,16 +107,17 @@ t1.start();
 
 * Java Thread Example by implementing Runnable interface
 ```
-class CreateThread implements Runnable{  
-public void run(){  
-System.out.println("thread is running...");  
-}  
+class CreateThread implements Runnable{
   
-public static void main(String args[]){  
-CreateThread m1=new CreateThread();  
-Thread t1 =new Thread(m1);  
-t1.start();  
- }  
+     public void run(){  
+         System.out.println("thread is running...");  
+     }  
+  
+     public static void main(String args[]){  
+          CreateThread m1=new CreateThread();  
+          Thread t1 =new Thread(m1);  
+          t1.start();  
+     }  
 }  
 ```
 
@@ -133,14 +134,17 @@ throws exception IllegalThreadStateException
 
 ```
 public class ThreadTwice extends Thread{  
- public void run(){  
-   System.out.println("running...");  
- }  
- public static void main(String args[]){  
-  ThreadTwice t1=new ThreadTwice();  
-  t1.start();  
-  t1.start();  
- }  
+ 	
+ 	public void run(){  
+   		System.out.println("running...");  
+	} 
+	 
+ 	public static void main(String args[]){  
+  		ThreadTwice t1=new ThreadTwice();  
+  		t1.start();  
+  		t1.start();  
+	}
+}  
  
  o/p:
  running
@@ -151,13 +155,15 @@ public class ThreadTwice extends Thread{
 because it is not coming from Thread class. So, that method consider as normal run() method
  ```
 class CallRun extends Thread{  
- public void run(){  
-   System.out.println("running...");  
- }  
- public static void main(String args[]){  
-  CallRun1 t1=new CallRun1();  
-  t1.run();//fine, but does not start a separate call stack  
- }  
+ 	
+ 	public void run(){  
+   		System.out.println("running...");  
+ 	}  
+ 	
+ 	public static void main(String args[]){  
+  		CallRun1 t1=new CallRun1();  
+  		t1.run();//fine, but does not start a separate call stack  
+ 	}  
 }  
 
 Output:running...

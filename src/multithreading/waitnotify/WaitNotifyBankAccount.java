@@ -38,7 +38,7 @@ class Account
 				System.out.println("Exception");
 			}
 		}
-		balance=temp-amount;  
+		balance=this.balance-amount;  
 		System.out.println("withdraw amt:"+amount);
 		System.out.println("withdraw completed..."); 
 		System.out.println("total balance:"+balance);
