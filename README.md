@@ -129,6 +129,7 @@ Runnable vs Threads
 
 --> Each Thread created by the Thread class is associated with new Object.
 															   ----------
+
 --> whereas Each Thread created by the Runnable interface shares the same Object.
 
 Thread Scheduler in Java
