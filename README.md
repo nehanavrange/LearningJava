@@ -123,6 +123,14 @@ class CreateThread implements Runnable{
 }  
 ```
 
+Runnable vs Threads
+-------------------
+--> The advantage of Runnable interface over extending Thread class is that you have space to extend another class if required.
+
+--> Each Thread created by the Thread class is associated with new Object.
+															   ----------
+--> whereas Each Thread created by the Runnable interface shares the same Object.
+
 Thread Scheduler in Java
 ------------------------
 It is a part of JVM that decides which thread should be run.
@@ -170,6 +178,10 @@ class CallRun extends Thread{
 
 Output:running...
  ```
+ 
+Methods inherited from class java.lang.Object
+---------------------------------------------
+--> clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait.
  
 Synchronization in Java:
 ------------------------

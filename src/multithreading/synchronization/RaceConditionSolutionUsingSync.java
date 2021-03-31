@@ -66,7 +66,7 @@ public class RaceConditionSolutionUsingSync {
 		t1.join();
 		t2.join();
 
-		System.out.println("Final amount is -"+ suyogacc.balance);
+		System.out.println("Final amount is :"+ suyogacc.balance);
 
 
 	}
