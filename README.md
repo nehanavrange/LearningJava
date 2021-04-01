@@ -125,11 +125,16 @@ class CreateThread implements Runnable{
 
 Runnable vs Threads
 -------------------
---> The advantage of Runnable interface over extending Thread class is that you have space to extend another class if required.
+--> When a class is already extended by another class then we can't extend it by Thread class.
 
+--> Because java doesn't support multiple inheritance.
+
+--> But we can implement the Runnable interface while extending another class.
+   
 --> Each Thread created by the Thread class is associated with new Object.
 															
 --> whereas Each Thread created by the Runnable interface shares the same Object.
+
 
 Thread Scheduler in Java
 ------------------------
@@ -179,6 +184,24 @@ class CallRun extends Thread{
 Output:running...
  ```
  
+ Critical Section:
+ ----------------
+ --> part of a program which accesses a shared resources at the same time is known as critical section.
+ 
+Race Condition:
+---------------
+--> when multiple threads tries to access a shared resource at the same time, So it gives erroneous result known as race condition. 
+
+--> to avoid this condition and the ways to achieve thread safe execution is as follows:
+
+* by using synchronization
+* by using lock mechanism  
+ 
+ --> above types are comes under mutex or mutual exclusive.
+ 
+ --> mutual exclusive means it is taking the mutual decision which thread can come in execution at a time.
+ 
+
 Methods inherited from class java.lang.Object
 ---------------------------------------------
 --> clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait.

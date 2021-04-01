@@ -15,7 +15,8 @@ class MyRunnable implements Runnable{
 	@Override
 	public void run() {
 		num++;
-		System.out.println("Thread is running in Runnable: "+num);
+		System.out.println("Thread is running in Runnable: "+
+		Thread.currentThread().getName()+":"+num);
 
 	}
 
