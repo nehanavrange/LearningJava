@@ -194,8 +194,9 @@ Race Condition:
 
 --> to avoid this condition and the ways to achieve thread safe execution is as follows:
 
-* by using synchronization
-* by using lock mechanism  
+* by using synchronization (implicit lock)
+* by using lock mechanism  (explicit lock)
+* Using Semaphore
  
  --> above types are comes under mutex or mutual exclusive.
  
@@ -283,6 +284,34 @@ It is also wake up signal.
 It gives signal to all waiting threads and that threads goes to runnable state for execution.
 
 At a time all waited threads are chosen to awakened. 
+
+Semaphore in Java:
+------------------
+Semaphore is a variable use for synchronization process.
+
+But it limits the number of threads to access a shared resource concurrently at a time.
+
+Basically it sets the limit of the threads.
+
+if number count > 0 then allowed to access.
+
+if number count <= 0 then denied to access.(negative no. not allowed)
+
+Ex: If we set a semaphore limit 4.
+
+Semaphore semaphore = new Semaphore(4);
+
+then it allows only 4 threads to access shared resource concurrently at a time.
+
+by using semaphore.acquire(); 
+
+it acquires the lock and count will decrease by 1 
+
+And it releases the lock by using
+
+semaphore.release(); 
+
+Then count will increase by 1
 
 
 
