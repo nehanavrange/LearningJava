@@ -25,6 +25,7 @@ public class SemaphoreTest {
                                 + semaphore.availablePermits());
                 
                 semaphore.acquire();
+                
                 System.out.println(name + " : got the permit!");
 
                 try {

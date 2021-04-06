@@ -285,6 +285,48 @@ It gives signal to all waiting threads and that threads goes to runnable state f
 
 At a time all waited threads are chosen to awakened. 
 
+Locking Mechanism:
+------------------
+Locking mechanism is similar to synchronization.
+
+Ex: using lock.lock();  //lock acquired
+    ........
+    ........
+    
+    lock.unlock();     // lock releases
+    
+We can achieve synchronization by using locking mechanism also provided with some new features.
+
+Main difference between synchronization and Lock API is that fairness property.
+
+fairness property means giving 1st priority to access longest waiting thread to the lock. 
+  
+But in synchronization there is no guarantee which waiting thread will get 1st access.
+
+Lock API
+--------
+* void lock()
+* void lockInterruptibly() 
+* boolean tryLock() 
+* boolean tryLock(long timeout, TimeUnit timeUnit)
+* void unlock()
+
+Lock Implementations
+--------------------
+* using ReentrantLock
+
+* ReentrantReadWriteLock
+
+* StampedLock
+
+Working With Conditions
+-----------------------
+Traditionally Java provides wait(), notify() and notifyAll() methods for thread intercommunication. 
+
+Conditions have similar mechanisms, but in addition, we can specify multiple conditions.
+
+wait(), notify() and notifyAll() instead of these await(),signal(),signalAll() are used.
+
 Semaphore in Java:
 ------------------
 Semaphore is a variable use for synchronization process.
