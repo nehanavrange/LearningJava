@@ -1,11 +1,13 @@
-package multithreading.synchronization.main;
+package multithreading.ThreadPool;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 class Account
 {
 	int balance;
 	public Account(int balance) {
-		
+
 		this.balance=balance;
 	}
 
@@ -22,7 +24,7 @@ class Account
 	}
 }
 
- class ATMDepositor extends Thread{
+class ATMDepositor extends Thread{
 	Account account;
 	public ATMDepositor(Account account) {
 		// TODO Auto-generated constructor stub
@@ -54,8 +56,11 @@ class ATMWithrawl extends Thread{
 	}
 }
 
-public class RaceConditionSolutionUsingSync {
-	public static void main(String[] args) throws InterruptedException {
+public class SynchronizationUsingThreadPool {
+	public static void main(String[] args) {
+
+		ExecutorService executor =Executors.newFixedThreadPool(5);
+		
 		Account suyogacc = new Account(1000);
 		ATMDepositor t1 = new ATMDepositor(suyogacc);
 		ATMWithrawl t2 = new ATMWithrawl(suyogacc);
@@ -63,11 +68,17 @@ public class RaceConditionSolutionUsingSync {
 		t2.start();
 
 
-		t1.join();
-		t2.join();
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		
 
 		System.out.println("Final amount is :"+ suyogacc.balance);
 
-
 	}
 }
+

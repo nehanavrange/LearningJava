@@ -1,28 +1,28 @@
-package multithreading.synchronization.main;
+package multithreading.dummy.testing;
 
-
+// not giving proper output using volatile
 class Account
 {
-	int balance;
+	static volatile int balance;
 	public Account(int balance) {
-		
+
 		this.balance=balance;
 	}
 
-	public synchronized void deposit(int amount)
+	public void deposit(int amount)
 	{
-		int temp=balance;
-		balance=temp+amount;
+		//int temp=balance;
+		this.balance=balance+amount;
 	}
 
-	public synchronized void withdraw(int amount)
+	public void withdraw(int amount)
 	{
-		int temp=balance;
-		balance=temp-amount;
+		//int temp=balance;
+		this.balance=balance-amount;
 	}
 }
 
- class ATMDepositor extends Thread{
+class ATMDepositor extends Thread{
 	Account account;
 	public ATMDepositor(Account account) {
 		// TODO Auto-generated constructor stub
@@ -54,8 +54,8 @@ class ATMWithrawl extends Thread{
 	}
 }
 
-public class RaceConditionSolutionUsingSync {
-	public static void main(String[] args) throws InterruptedException {
+public class UsingVolatile {
+	public static void main(String[] args) {
 		Account suyogacc = new Account(1000);
 		ATMDepositor t1 = new ATMDepositor(suyogacc);
 		ATMWithrawl t2 = new ATMWithrawl(suyogacc);
@@ -63,8 +63,14 @@ public class RaceConditionSolutionUsingSync {
 		t2.start();
 
 
-		t1.join();
-		t2.join();
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+
+			e.printStackTrace();
+		}
+
 
 		System.out.println("Final amount is :"+ suyogacc.balance);
 

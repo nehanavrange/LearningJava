@@ -355,8 +355,17 @@ semaphore.release();
 
 Then count will increase by 1
 
+Thread Pool in Java
+-------------------
+--> Thread Pool means a collection of idle threads that are used when required to execute tasks.
 
-
+--> Need of Thread Pool: 
+   
+* to limits the number of threads
+    
+* to reuse the threads 
+    
+    
 Collections Framework
 ===================
 
@@ -371,27 +380,32 @@ remove()
 through Iterable method we get the reference of hasNext & next
 
 
-List
+List (Interface)
 ----
 * Stores elements in indexed approach
 * can add duplicate elements (supports redundancy)
 
-* ArryList 
-    * ArrayList is implemented as a resizable array.
+* ArryList (Class)
+    * ArrayList is implemented as a resizable or growable array.
     * As more elements are added to ArrayList, its size is increased dynamically.
+    * default capacity = 10 and increaseing capacity = (current capacity * 3/2)+1.
     * It's elements can be accessed directly by using the get and set methods, since ArrayList is essentially an array.
-
-* LinkedlList
+    * duplicates,heterogeneous and null objects are allowed.
+    * worst choice for inserting/deleting in middle of ArrayList. Because several shift operation required.
+    * insertion order is preserved.
+     
+    
+* LinkedlList (Class)
     * LinkedList is implemented as a double linked list. 
     * Its performance on add and remove is better than Arraylist, but worse on get and set methods. 
     * Single vs double linked list 
          * Single - Used for stack
          * Double Linked List -  implement stacks as well as heaps and binary trees.
 
-* Vector
+* Vector (Class)
     * similar to ArrayList , but vector is synchronized.
 
-* Queue
+* Queue (Interface)
     * Will sort the data
     * front will point to last element 
     * rear will be point to first element which get added
@@ -400,7 +414,7 @@ List
     * polling - removing head of queue
 
 
-* Set
+* Set (Interface)
     * data is unique, data is unordered due to hashing
     * data is being added is not indexed
     * basically we get the hashCode of which we added

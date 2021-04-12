@@ -9,11 +9,11 @@ class Operation extends Thread
 
 	public void run() {
 		for(int i=0;i<10;i++) {
-			System.out.println("Thread " +this.getName()+" Number-"+number++);
+			System.out.println("Thread " +this.getName()+" Number:"+number++);
 			try {
 				sleep(1000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 		}
