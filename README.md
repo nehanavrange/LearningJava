@@ -391,16 +391,22 @@ List (Interface)
     * default capacity = 10 and increaseing capacity = (current capacity * 3/2)+1.
     * It's elements can be accessed directly by using the get and set methods, since ArrayList is essentially an array.
     * duplicates,heterogeneous and null objects are allowed.
-    * worst choice for inserting/deleting in middle of ArrayList. Because several shift operation required.
-    * insertion order is preserved.
+    * Worst choice for inserting/deleting in middle of ArrayList. Because several shift operation required.
+    * Insertion order is preserved.
+    * non-synchronized.
      
     
 * LinkedlList (Class)
-    * LinkedList is implemented as a double linked list. 
-    * Its performance on add and remove is better than Arraylist, but worse on get and set methods. 
+    * LinkedList is implemented as a double linked list.
+    * Insertion order is preserved. 
+    * non-synchronized.
+    * duplicates,heterogeneous and null objects are allowed.
+    * Its performance on add and remove is better than ArrayList, but worse on get and set methods. 
     * Single vs double linked list 
          * Single - Used for stack
          * Double Linked List -  implement stacks as well as heaps and binary trees.
+    * for retrieval ArrayList is better.
+
 
 * Vector (Class)
     * similar to ArrayList , but vector is synchronized.
