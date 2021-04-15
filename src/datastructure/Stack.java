@@ -33,8 +33,10 @@ public class Stack {
 
 			case 3: peek();
 			break;
+
 			case 4: traverse();
 			break;
+
 			case 5: System.exit(1);
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + ch);
@@ -44,9 +46,10 @@ public class Stack {
 	}
 	private static void traverse() {
 
+		System.out.println("Show stack element");
 		for (int i = top; i >= 0; i--) {
 			System.out.println(stack[i]);
-			
+
 		}
 		System.out.println();
 
@@ -70,7 +73,7 @@ public class Stack {
 			System.out.println("Removed element:"+items);
 		}
 
-		
+
 
 	}
 	private static void push() {
@@ -80,10 +83,10 @@ public class Stack {
 		else {
 			++top;
 			System.out.println("Enter Elements to push in statck:");
-		    items = sc.nextInt();
-		    stack[top]=items;
+			items = sc.nextInt();
+			stack[top]=items;
 		}
-		
+
 
 
 	}
