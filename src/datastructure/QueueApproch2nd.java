@@ -2,8 +2,7 @@ package datastructure;
 
 import java.util.Scanner;
 
-// 1st approach it reduces size by one space 
-public class Queue {
+public class QueueApproch2nd {
 	static int ch,size,queue[],item;
 	static int front=0,rear=0;
 	static Scanner sc=new Scanner(System.in);
@@ -69,7 +68,11 @@ public class Queue {
 		}
 		else {
 			item=queue[front];
-			front++;        
+			for (int i = 0; i < rear-1; i++) {
+				queue[i]=queue[i+1];
+			}
+			rear--;
+
 			System.out.println("Removed element:"+item);
 		}
 	}
@@ -86,5 +89,3 @@ public class Queue {
 		}
 	}
 }
-
-
