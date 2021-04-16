@@ -2,6 +2,8 @@ package datastructure;
 
 import java.util.Scanner;
 
+
+//In this approach elements are shifted 
 public class QueueApproch2nd {
 	static int ch,size,queue[],item;
 	static int front=0,rear=0;
