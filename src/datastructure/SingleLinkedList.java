@@ -3,24 +3,24 @@ package datastructure;
 public class SingleLinkedList {
 
 	Node head=null;
-	
+
 	//Represent the Node
 	static class Node{
 		int data;
 		Node next;
 		public Node(int data) {
-		
+
 			this.data = data;
 			this.next = null;
 		}	
 	}
-	
+
 	void insertFront(int data) {
 		Node newNode= new Node(data);
 		newNode.next=head;
 		head=newNode;
 	}
-	
+
 	void insertAtMiddle(Node prev,int data)
 	{
 		Node newNode= new Node(data);
@@ -29,7 +29,7 @@ public class SingleLinkedList {
 		prev.next=newNode;
 		newNode.next=temp;
 	}
-	
+
 	void insertAtEnd(int data)
 	{
 		Node newNode= new Node(data);
@@ -49,28 +49,28 @@ public class SingleLinkedList {
 			prev=temp;
 			temp=prev.next;
 		}
-		
+
 		prev.next=temp.next;
-		
-		
+
+
 	}
 
-	  //display() will display all the nodes present in the list    
+	//display() will display all the nodes present in the list    
 	void display() {
 		//Node current will point to head
 		Node current=head;
-		  if(head == null) {    
-	            System.out.println("List is empty");    
-	            return;    
-	        }    
-		  System.out.println("Nodes of singly linked list: ");    
-		  while(current!=null) {
-			  System.out.println(current.data+" ");
-			  current =current.next;
-		  }
-		  System.out.println();   
+		if(head == null) {    
+			System.out.println("List is empty");    
+			return;    
+		}    
+		System.out.println("Nodes of singly linked list: ");    
+		while(current!=null) {
+			System.out.println(current.data+" ");
+			current =current.next;
+		}
+		System.out.println();   
 	}
-	
+
 	public static void main(String[] args) {
 		SingleLinkedList sl=new SingleLinkedList();
 		Node first= new Node(10);
