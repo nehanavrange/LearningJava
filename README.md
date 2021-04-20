@@ -8,6 +8,7 @@ Table of contents
    * [Collections Framework](#collections-framework)
    * [Serialization](#serialization)
    * [MultiThreading](#multithreading)
+   * [DataStructure](#datastructure)
 
 <!--te-->
 

@@ -54,6 +54,18 @@ public class SingleLinkedList {
 
 
 	}
+	/* Returns count of nodes in linked list */
+	public int getCount()
+	{
+		Node temp = head;
+		int count = 0;
+		while (temp != null)
+		{
+			count++;
+			temp = temp.next;
+		}
+		return count;
+	}
 
 	//display() will display all the nodes present in the list    
 	void display() {
@@ -86,7 +98,7 @@ public class SingleLinkedList {
 		sl.display();
 		sl.delete(5);
 		sl.display();
-
+		System.out.println("Count of nodes in list is " + sl.getCount());
 	}
 
 }

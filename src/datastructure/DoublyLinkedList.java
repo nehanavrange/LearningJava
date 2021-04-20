@@ -70,8 +70,18 @@ public class DoublyLinkedList {
 			System.out.println(current.data);
 			current=current.next;
 		}
-
-
+	}
+	/* Returns count of nodes in linked list */
+	public int getCount()
+	{
+		Node temp = head;
+		int count = 0;
+		while (temp != null)
+		{
+			count++;
+			temp = temp.next;
+		}
+		return count;
 	}
 
 	public static void main(String[] args) {
@@ -113,7 +123,7 @@ public class DoublyLinkedList {
 		dl.delete(e);
 		dl.display();
 
-
+		System.out.println("Count of nodes in list is " + dl.getCount());
 	}
 
 }
