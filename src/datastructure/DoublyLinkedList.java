@@ -97,7 +97,7 @@ public class DoublyLinkedList {
 		dl.display();
 
 		Node d = new Node(100);
-		dl.insertAtMiddle(d, b); //inserting node z after node b
+		dl.insertAtMiddle(d, b); //inserting node d after node b
 		Node e = new Node(-1);
 		dl.insertAtMiddle(e, a.next);
 		dl.display();
