@@ -21,10 +21,10 @@ There are various types of DataStructure:
 
 * Linear DataStructure: Stack,Queue,LinkedList 
 
-* All operations are done in Stack,Queue,LinkedList in a sequential manner so these datastructure is called as linear datastructure.
+  * All operations are done in Stack,Queue,LinkedList in a sequential manner so these datastructure is called as linear datastructure.
 
 1. Stack:
----------
+
 * perform operations on LIFO(Last In First Out) or FILO(First In LastOut) order.
 * Stacks are used to implement functions, parsers, backtracking algorithms. A pile of books, a stack of dinner plates,etc. 
 * The basic operating principle is that last item you put in is first item you can take out.
