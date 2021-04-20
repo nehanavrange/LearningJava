@@ -23,11 +23,34 @@ There are various types of DataStructure:
 
   * All operations are done in Stack,Queue,LinkedList in a sequential manner so these datastructure is called as linear datastructure.
 
-1. Stack:
-
+Stack:
+------
 * perform operations on LIFO(Last In First Out) or FILO(First In LastOut) order.
 * Stacks are used to implement functions, parsers, backtracking algorithms. A pile of books, a stack of dinner plates,etc. 
 * The basic operating principle is that last item you put in is first item you can take out.
+* Stack is used in solving problems works on recursion.
+
+Queue:
+------
+* perform operations on FIFO(First In First Out) order.
+* i.e. the element inserted at first in the list, is the first element to be removed from the list. 
+* the insertion and deletion can take place from one end.
+* It requires more memory
+* Queue is used in solving problems having sequential processing.
+* A real-world example of queue can be a printer,election voting.
+
+
+Circular Queue:
+---------------
+* a linear data structure in which the last element of the Queue is connected to the first element, thus creating a circle.
+* the insertion and deletion can take place from any end.
+* It requires less memory.
+* It has no specific order for execution.
+* A real-world example: Traffic system
+* In a computer-control traffic system, Each light of traffic light gets ON one by one after every interval of time. 
+
+  Like red light gets ON for one minute then yellow light for one minute and then green light. After green light, the red light gets ON.
+
 
 
 MultiThreading
