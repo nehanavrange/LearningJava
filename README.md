@@ -19,7 +19,7 @@ DataStructure is a way of organizing data in a computer so that it can be used e
 
 There are various types of DataStructure:
 
-* Linear DataStructure: Stack,Queue,LinkedList 
+* Linear DataStructure:Stack,Queue,LinkedList 
 
   * All operations are done in Stack,Queue,LinkedList in a sequential manner so these datastructure is called as linear datastructure.
 
@@ -51,8 +51,16 @@ Circular Queue:
 
   Like red light gets ON for one minute then yellow light for one minute and then green light. After green light, the red light gets ON.
 
-
-
+Singly linked list (SLL):
+-------------------------
+* SLL has nodes with only one data field and next link field.
+* traversal can be done using the next node link only.
+* occupies less memory than DLL as it has only 2 fields.
+Doubly linked list (DLL):
+-------------------------
+* DLL has nodes with a data field, a previous link field and a next link field.
+* traversal can be done using the previous node link or the next node link.
+* occupies more memory than SLL as it has 3 fields.
 MultiThreading
 ==============
 Multithreading is a process of executing multiple threads simultaneously.
