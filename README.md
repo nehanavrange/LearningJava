@@ -420,25 +420,33 @@ Thread Pool in Java
     
     
 Collections Framework
-===================
+=====================
+Collection is a group of individual objects.
+
+A framework is a set of classes and interfaces which provide a ready-made architecture.
 
 **Java Collections Framework -heirarchy-- relationship between various api **
 
-Iterator
---------
+1. Iterable Interface:
+
 root interface , used to iterate to forward direction.
 hasNext()
 next()
 remove()
 through Iterable method we get the reference of hasNext & next
 
+2. Collection Interface: 
 
-List (Interface)
-----
+This interface extends the iterable interface and implemented by all the classes in the collection framework. 
+
+This interface contains all the basic methods which every collection has like adding, removing, clearing, etc.
+
+3. List Interface:
+
 * Stores elements in indexed approach
 * can add duplicate elements (supports redundancy)
 
-* ArryList (Class)
+* ArryList (Class):
     * ArrayList is implemented as a resizable or growable array.
     * As more elements are added to ArrayList, its size is increased dynamically.
     * default capacity = 10 and increaseing capacity = (current capacity * 3/2)+1.
@@ -449,7 +457,7 @@ List (Interface)
     * non-synchronized.
      
     
-* LinkedlList (Class)
+* LinkedlList (Class):
     * LinkedList is implemented as a double linked list.
     * Insertion order is preserved. 
     * non-synchronized.
@@ -461,10 +469,17 @@ List (Interface)
     * for retrieval ArrayList is better.
 
 
-* Vector (Class)
+* Vector (Class):
     * similar to ArrayList , but vector is synchronized.
+ 
+* Stack (Class):
+    * implements Stack data structure. 
+    * based on last-in-first-out. 
+    * In addition to the basic push and pop operations, the class provides three more functions of empty, search and peek.
+ 
+ The class can also be referred to as the subclass of Vector.     
 
-* Queue (Interface)
+4. Queue (Interface):
     * Will sort the data
     * front will point to last element 
     * rear will be point to first element which get added
@@ -472,6 +487,10 @@ List (Interface)
     * peeking - obtaining head of queue 
     * polling - removing head of queue
 
+* Priority Queue (Class):
+    * PriorityQueue doesn’t permit null
+    * PriorityQueue is not thread-safe 
+    * so java provides PriorityBlockingQueue class that implements the BlockingQueue interface to use in java multithreading environment.
 
 * Set (Interface)
     * data is unique, data is unordered due to hashing
