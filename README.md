@@ -546,9 +546,5 @@ This interface contains all the basic methods which every collection has like ad
       TreeSet ts = new TreeSet();
            
       Set syncSet = Collections.synchronziedSet(ts);
-    
-    
-     
-     
 
 **Performance of tree set slower since it takes time for sorting the data.**
