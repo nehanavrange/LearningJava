@@ -474,6 +474,7 @@ This interface contains all the basic methods which every collection has like ad
  
 * Stack (Class):
     * implements Stack data structure. 
+    * stack is child class of Vector 
     * based on last-in-first-out. 
     * In addition to the basic push and pop operations, the class provides three more functions of empty, search and peek.
  
@@ -492,9 +493,63 @@ This interface contains all the basic methods which every collection has like ad
     * PriorityQueue is not thread-safe 
     * so java provides PriorityBlockingQueue class that implements the BlockingQueue interface to use in java multithreading environment.
 
-* Set (Interface)
-    * data is unique, data is unordered due to hashing
-    * data is being added is not indexed
+5. Deque (Interface):
+    * also known as a double-ended queue.
+    * we can add and remove the elements from both the ends of the queue.
+    * This interface extends the queue interface. 
+    * implements this interface is ArrayDeque class.
+
+* ArrayDeque (Class):
+    * provides resizable-array, no capacity restriction.
+    * not thread-safe.
+    * null element not allowed.
+    * ArrayDeque is faster than Stack,LinkedList.
+
+
+6. Set (Interface):
+    * for storing unique objects, data is unordered because it doesn't have index.
+    * retrieving is sequential because of not index base.
     * basically we get the hashCode of which we added
+    * only one null is allowed.
+    * This set interface is implemented by various classes like HashSet, TreeSet, LinkedHashSet.
+    * HS and LHS must override equals() and hashcode() method, otherwise data wise duplicates will store.
+    * HS and LHS allowed homogeneous,heterogeneous and unique objects.
+    * HS and LHS default capacity is 16 and increases by double and Load factor(LF) is 75% .
+    * HS and LHS are not synchronize.
+
+* HashSet(HS) (Class):
+    * inherent implementation of the hash table data structure.
+    * background HashMap object is used.
+    * inherent implementation of the hash table data structure. 
+    * objects are inserted based on hashcode.
+    
+* LinkedHashSet(LHS) (Class):
+    * background uses hashset and doubly linkedlist datastructure.
+    * performance wise LHS is slower than HS.
+    * maintains storing order or insertion order but not index order.
+    
+7. Sorted Set (Interface):
+    * similar to Set Interface.
+    * sorted set interface extends the set interface.
+    * The class which implements this interface is TreeSet.
+    
+    
+* TreeSet (Class): 
+    * must compare objects.
+    * allowed only homogeneous and comparable objects.
+    * default data store in ascending sorting order.
+    * must override Comparable.compareTo() or Comparator.compare(_,_) method otherwise it will throw ClassCastException, if inserted Heterogeneous objects.
+    * null value not allowed.
+    * duplicate values are not allowed
+    * is an implementation of a self-balancing binary search tree like a Red-Black Tree. 
+    * implementation of a TreeSet is not synchronized. 
+    * to make synchronized use Collections.synchronizedSortedSet() method.
+    * EX:  TreeSet ts = new TreeSet();
+           
+           Set syncSet = Collections.synchronziedSet(ts);
+    
+    
+     
+     
 
 **Performance of tree set slower since it takes time for sorting the data.**
