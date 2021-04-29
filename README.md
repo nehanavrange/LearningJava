@@ -477,9 +477,7 @@ This interface contains all the basic methods which every collection has like ad
     * stack is child class of Vector 
     * based on last-in-first-out. 
     * In addition to the basic push and pop operations, the class provides three more functions of empty, search and peek.
- 
- The class can also be referred to as the subclass of Vector.     
-
+    
 4. Queue (Interface):
     * Will sort the data
     * front will point to last element 
