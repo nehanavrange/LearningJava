@@ -542,9 +542,9 @@ This interface contains all the basic methods which every collection has like ad
     * is an implementation of a self-balancing binary search tree like a Red-Black Tree. 
     * implementation of a TreeSet is not synchronized. 
     * to make synchronized use Collections.synchronizedSortedSet() method.
-    * EX:  TreeSet ts = new TreeSet();
+      TreeSet ts = new TreeSet();
            
-           Set syncSet = Collections.synchronziedSet(ts);
+      Set syncSet = Collections.synchronziedSet(ts);
     
     
      
