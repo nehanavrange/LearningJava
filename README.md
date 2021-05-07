@@ -517,7 +517,12 @@ This interface contains all the basic methods which every collection has like ad
 
 * HashSet(HS) (Class):
     * inherent implementation of the hash table data structure.
-    * background HashMap object is used.
+    * HashSet also uses HashMap internally.
+    
+    <p align="center">
+     <img width="460" height="300" src=".images/hashsetinternal.png">
+    </p>
+    
     * inherent implementation of the hash table data structure. 
     * objects are inserted based on hashcode.
     
@@ -543,9 +548,57 @@ This interface contains all the basic methods which every collection has like ad
     * implementation of a TreeSet is not synchronized. 
     * to make synchronized use Collections.synchronizedSortedSet() method.
       
-  ```
-  TreeSet ts = new TreeSet();
+    * Ex: TreeSet ts = new TreeSet();
            
-  Set syncSet = Collections.synchronziedSet(ts);
-  ```
+          Set syncSet = Collections.synchronziedSet(ts);
+ 
 **Performance of tree set slower since it takes time for sorting the data.**
+
+8. Map (Interface):
+    * Map interface is not a subtype of the Collection interface.
+    * Map interface present in java.util package. 
+    * A Map is a Data Structure, contains value on the basis of key-value pair.
+    * Each key-value pair is known as Entry.
+    * Map contains unique keys but value can be homogeneous,heterogeneous and duplicate.
+    * map is useful for searching,updating,deleting on the basis of key.
+    * if duplicate value is passed then old value is replace with new one.
+    
+* HashMap (Class):
+    * implements Map interface.
+    * HashMap uses technique called Hashing.
+    * Hashing is a process of converting an Object into Integer value.
+    * contains array of nodes.
+    * hashCode(): returns memory reference of object in Integer form.
+    * And that Integer number is called as Bucket number.
+    * Bucket is used to store nodes.
+    * When we add HashSet,LinkedHashSet,HashMap,LinkedHashMap,HashTable,properties put() method internally calls 
+    1)hashCode() 2)== operator 3)equals() methods  for stopping duplicate objects.
+    * to stop duplicate objects, newly adding key must be compare to all keys available in this map.
+    * for comparison we need 
+    1)== operator -> for reference comparison
+    2)equals() method -> for data comparison
+    then why hashCode need?
+    * 
+    
+    
+
+Collections Class in Java
+=========================
+
+1. Adding Elements
+2. Sorting a Collection
+3. Searching in a Collection
+4. Copying Elements
+5. Disjoint Collection
+
+
+
+
+
+
+
+
+
+
+
+
