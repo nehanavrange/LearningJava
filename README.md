@@ -571,15 +571,53 @@ This interface contains all the basic methods which every collection has like ad
     * hashCode(): returns memory reference of object in Integer form.
     * And that Integer number is called as Bucket number.
     * Bucket is used to store nodes.
+    
+* why we use HashMap and HashMap Internals?
+
+  Ex: 
+     
+    <p align="center">
+     <img width="460" height="300" src=".images/hashMap1.png">
+    </p>
+    
+    Comparing an object with every object available in collection is time consuming.
+    
+    Because no. of comparison increases and performance decreases.
+    
+    Comparing objects with only its related group of objects(means in hashMap, Bucket is used for grouping) is good programming practice.
+    
+    Hence while storing objects we must store objects as group based on their values.
+    
+    So that while searching we can compare this new object only with its group. 
+    
+   
     * When we add HashSet,LinkedHashSet,HashMap,LinkedHashMap,HashTable,properties put() method internally calls 
     1)hashCode() 2)== operator 3)equals() methods  for stopping duplicate objects.
     * to stop duplicate objects, newly adding key must be compare to all keys available in this map.
     * for comparison we need 
     1)== operator -> for reference comparison
     2)equals() method -> for data comparison
-    then why hashCode need?
-    * 
     
+    then why hashCode() need?
+    * hashCode is not meant for comparison rather it is meant for storing relative objects as one group.
+    and it is also used for finding the newly adding or searching objects belong to which group.
+    * by using hashCode() no. of comparison decreases and execution become fast.
+    * Algorithm of put(): when we add object to map
+    1. put() internally calls hashCode() method by using this object/key.
+    
+    2. put() will find with key hashCode is there any bucket already existed.
+    
+    3 if not existed then it creates new bucket and store this object in this bucket directly without any comparison.
+    
+    4. if bucket is available then comparison starts to know whether that object/key is duplicate or not.
+       * it uses == operator to compare objects with reference.
+       * if reference is same, it is duplicate,then existing mapped value is replace with new value.
+       * if reference is different, it calls equals(-) method to compare two objects with this data
+       * if data is same, it is duplicate, then existing mapped value is replace with new value.
+       * if data is different it is store in same bucket.
+        
+    
+       
     
 
 Collections Class in Java
