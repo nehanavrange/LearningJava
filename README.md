@@ -59,29 +59,29 @@ OBject Oriented Programming system is a programming concept that work on princip
       
    EX: 
       
-```
+```java
       //Generalize class
       class Vehicle{ 
-      //gives msg to all vehicle should be stopped  
-       void stop(){
-        System.out.println("Vehicle gives stop msg");
-       }    
+	       //gives msg to all vehicle should be stopped  
+	       void stop(){
+	           System.out.println("Vehicle gives stop msg");
+	       }    
       }
        
        //Specialize class
        class Car extends Vehicle{
-       //gives same msg
-        void stop()
-        {
-         System.out.println("Car has different mechanism to stop");
-        }
+	       //gives same msg
+	        void stop()
+	        {
+	            System.out.println("Car has different mechanism to stop");
+	        }
        }
        
        class Bicycle extends Vehicle{
-        void stop()
-        {
-         System.out.println("Bicycle has different mechanism to stop");
-        }
+	        void stop()
+	        {
+	             System.out.println("Bicycle has different mechanism to stop");
+	        }
        }
        
 ```
