@@ -55,6 +55,8 @@ OBject Oriented Programming system is a programming concept that work on princip
 
    Same message given to a generalize thing with same behavior but implemented differently for specialize thing.
   
+   Polymorphism can be achieve by using overriding(runtime polymorphism) and overloading(compile time polymorphism).
+      
    EX: 
       
       ```
@@ -84,27 +86,31 @@ OBject Oriented Programming system is a programming concept that work on princip
       ```
    
    Another example is Traffic signal:
+   
    Traffic signal has red,green,yellow light.
    red light gives stop message to all types of vehicles
    and all types of vehicle has different mechanism to stop.
    
+5] Abstraction:   
    
+   means partial contract/higher level information(concrete method)
    
+   Hiding internal details and only showing funtionality.
    
+   In java, we use abstract class and interface to achieve abstraction.
    
+   EX. 1: A man driving a car. Man knows only pressing the accelerator will increase the speed or applying brakes will stop the car, but he doesn't know about how that funtionality works internally.
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
+   EX. 2: T.V remote has the funtionality ON and OFF but customer doesn't know how it works.
+    
+6] Encapsulation:
 
-
-
+   Binding data(States and behavior) into a single unit(Class).
+      
+   EX: a capsule which is mixed of several medicine.
+   
+   
+     
 
 
 DataStructure
