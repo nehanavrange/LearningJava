@@ -7,7 +7,7 @@ Table of contents
 <!--ts-->
    * [Collections Framework](#collections-framework)
    * [Serialization](#serialization)
-   * [OOPs Concept](#oops concept)
+   * [OOPs Concept](#oops_concept)
    * [MultiThreading](#multithreading)
    * [DataStructure](#datastructure)
 
