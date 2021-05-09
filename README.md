@@ -7,7 +7,7 @@ Table of contents
 <!--ts-->
    * [Collections Framework](#collections-framework)
    * [Serialization](#serialization)
-   * [OOPs Concept](#oops_concept)
+   * [OOPs Concept](#oops-concept)
    * [MultiThreading](#multithreading)
    * [DataStructure](#datastructure)
 
@@ -59,14 +59,14 @@ OBject Oriented Programming system is a programming concept that work on princip
       
    EX: 
       
-      ```
+```
       //Generalize class
       class Vehicle{ 
       //gives msg to all vehicle should be stopped  
        void stop(){
         System.out.println("Vehicle gives stop msg");
        }    
-       }
+      }
        
        //Specialize class
        class Car extends Vehicle{
@@ -83,7 +83,8 @@ OBject Oriented Programming system is a programming concept that work on princip
          System.out.println("Bicycle has different mechanism to stop");
         }
        }
-      ```
+       
+```
    
    Another example is Traffic signal:
    
