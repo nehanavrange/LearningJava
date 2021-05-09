@@ -57,7 +57,7 @@ OBject Oriented Programming system is a programming concept that work on princip
   
    EX: 
       
-      ```java
+      ```
       
       //Generalize class
       class Vehicle{ 
