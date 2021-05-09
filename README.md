@@ -18,31 +18,47 @@ OOPs Concept
 OBject Oriented Programming system is a programming concept that work on principle of Object,Class,Inheritance,Polymorphism,Abstraction and Encapsulation.
 
 1] Object:
+
    Any entity that has states and behavior in known as Object.
    
    Ex: chair,pen,table,etc. it can be any entity logical or physical.
+   
    EX.1: A dog is an object. 
+   
          States: color,name,breed,etc
+         
          Behavior: barking,eating,etc
+         
    EX.2: Human is an Object
+   
          Human States: height,weight,hair color,name,etc.
+         
          Human Behavior: eating,walking,talking,etc.
 
 2] Class:
+
    Collection of objects is called is called as Class.
+   
    EX: If Animal is a class then dog,cat is an object.
+   
        If Human is a class then man is an object.
         
 3] Inheritance:
+
    When one object acquires all the properties & behavior of parent object is known as Inheritance.
+  
    It provides code reusability.
+  
    EX: Operating system -> window 8 to window 8.1 extending functionality.
    
 4] Polymorphism:(means same action perform in many ways)
+
    Same message given to a generalize thing with same behavior but implemented differently for specialize thing.
+  
    EX: 
       
       ```java
+      
       //Generalize class
       class Vehicle{ 
       //gives msg to all vehicle should be stopped  
