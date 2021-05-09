@@ -58,7 +58,6 @@ OBject Oriented Programming system is a programming concept that work on princip
    EX: 
       
       ```
-      
       //Generalize class
       class Vehicle{ 
       //gives msg to all vehicle should be stopped  
@@ -82,7 +81,6 @@ OBject Oriented Programming system is a programming concept that work on princip
          System.out.println("Bicycle has different mechanism to stop");
         }
        }
-       
    ```
    
    Another example is Traffic signal:
