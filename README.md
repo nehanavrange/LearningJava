@@ -7,10 +7,90 @@ Table of contents
 <!--ts-->
    * [Collections Framework](#collections-framework)
    * [Serialization](#serialization)
+   * [OOPs Concept](#oops)
    * [MultiThreading](#multithreading)
    * [DataStructure](#datastructure)
 
 <!--te-->
+
+OOPs Concept
+============
+OBject Oriented Programming system is a programming concept that work on principle of Object,Class,Inheritance,Polymorphism,Abstraction and Encapsulation.
+
+1] Object:
+   Any entity that has states and behavior in known as Object.
+   
+   Ex: chair,pen,table,etc. it can be any entity logical or physical.
+   EX.1: A dog is an object. 
+         States: color,name,breed,etc
+         Behavior: barking,eating,etc
+   EX.2: Human is an Object
+         Human States: height,weight,hair color,name,etc.
+         Human Behavior: eating,walking,talking,etc.
+
+2] Class:
+   Collection of objects is called is called as Class.
+   EX: If Animal is a class then dog,cat is an object.
+       If Human is a class then man is an object.
+        
+3] Inheritance:
+   When one object acquires all the properties & behavior of parent object is known as Inheritance.
+   It provides code reusability.
+   EX: Operating system -> window 8 to window 8.1 extending functionality.
+   
+4] Polymorphism:(means same action perform in many ways)
+   Same message given to a generalize thing with same behavior but implemented differently for specialize thing.
+   EX: 
+      
+      ```java
+      //Generalize class
+      class Vehicle{ 
+      //gives msg to all vehicle should be stopped  
+       void stop(){
+        System.out.println("Vehicle gives stop msg");
+       }    
+       }
+       
+       //Specialize class
+       class Car extends Vehicle{
+       //gives same msg
+        void stop()
+        {
+         System.out.println("Car has different mechanism to stop");
+        }
+       }
+       
+       class Bicycle extends Vehicle{
+        void stop()
+        {
+         System.out.println("Bicycle has different mechanism to stop");
+        }
+       }
+       
+   ```
+   
+   Another example is Traffic signal:
+   Traffic signal has red,green,yellow light.
+   red light gives stop message to all types of vehicles
+   and all types of vehicle has different mechanism to stop.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+
 
 
 DataStructure
@@ -575,7 +655,7 @@ This interface contains all the basic methods which every collection has like ad
     * Bucket is used to store nodes.
     
 * why we use HashMap and HashMap Internals?
-
+  -> HashMap is used for storing objects with Mapping.
   Ex: 
      
     <p align="center">
@@ -597,8 +677,8 @@ This interface contains all the basic methods which every collection has like ad
     1)hashCode() 2)== operator 3)equals() methods  for stopping duplicate objects.
     * to stop duplicate objects, newly adding key must be compare to all keys available in this map.
     * for comparison we need 
-    1)== operator -> for reference comparison
-    2)equals() method -> for data comparison
+    1)== operator -> for reference comparison</br>
+    2)equals() method -> for data comparison</br>
     
     then why hashCode() need?
     * hashCode is not meant for comparison rather it is meant for storing relative objects as one group.
@@ -609,7 +689,7 @@ This interface contains all the basic methods which every collection has like ad
     
     2. put() will find with key hashCode is there any bucket already existed.
     
-    3 if not existed then it creates new bucket and store this object in this bucket directly without any comparison.
+    3. if not existed then it creates new bucket and store this object in this bucket directly without any comparison.
     
     4. if bucket is available then comparison starts to know whether that object/key is duplicate or not.
        * it uses == operator to compare objects with reference.
