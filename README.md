@@ -165,6 +165,14 @@ Doubly linked list (DLL):
 * DLL has nodes with a data field, a previous link field and a next link field.
 * traversal can be done using the previous node link or the next node link.
 * occupies more memory than SLL as it has 3 fields.
+
+
+
+
+
+
+
+
 MultiThreading
 ==============
 Multithreading is a process of executing multiple threads simultaneously.
@@ -518,6 +526,8 @@ Thread Pool in Java
 * to limits the number of threads
     
 * to reuse the threads 
+
+
 
 
 
