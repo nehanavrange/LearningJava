@@ -5,13 +5,22 @@ Table of contents
 =================
 
 <!--ts-->
-   * [Collections Framework](#collections-framework)
-   * [Serialization](#serialization)
    * [OOPs Concept](#oops-concept)
+   * [Collections Framework](#collections-framework)
    * [MultiThreading](#multithreading)
    * [DataStructure](#datastructure)
+   * [SpringBoot](#springboot)
+   * [Serialization](#serialization)
+  
 
 <!--te-->
+
+
+SpringBoot
+==========
+
+
+
 
 OOPs Concept
 ============
@@ -73,7 +82,7 @@ OBject Oriented Programming system is a programming concept that work on princip
 	       //gives same msg
 	        void stop()
 	        {
-	            System.out.println("Car has different mechanism to stop");
+	            System.out.println("Car uses disc to stop");
 	        }
        }
        
@@ -359,7 +368,8 @@ Race Condition:
 
 * by using synchronization (implicit lock)
 * by using lock mechanism  (explicit lock)
-* Using Semaphore
+* using Semaphore
+* using Volatile keyword for fields.
  
  --> above types are comes under mutex or mutual exclusive.
  
@@ -370,6 +380,21 @@ Methods inherited from class java.lang.Object
 ---------------------------------------------
 --> clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait.
  
+DeadLock:
+---------
+When a thread acquires the lock and it goes on waiting state.
+
+At the same time another thread tries to acquire the same lock, it can't get access.
+
+Because previous thread already holding the lock, that time deadlock occur.
+
+Avoid DeadLock:
+---------------
+-> By providing ordered locked position.
+-> avoid nested locked
+-> avoid unnecessary locks.
+
+
 Synchronization in Java:
 ------------------------
 --> controlling the access of multiple threads to any shared resource.
@@ -572,7 +597,7 @@ This interface contains all the basic methods which every collection has like ad
     * non-synchronized.
      
     
-* LinkedlList (Class):
+* LinkedList (Class):
     * LinkedList is implemented as a double linked list.
     * Insertion order is preserved. 
     * non-synchronized.

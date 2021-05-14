@@ -1,6 +1,8 @@
 package collections.list;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ArraySubList {
@@ -24,5 +26,20 @@ public static void main(String[] args) {
 	
 	//java10 methods
 	System.out.println(List.copyOf(list));
+	
+	List<Object> list1=Arrays.asList("a","b","c",5,9.4); //immutable collection
+	System.out.println("list1: "+list1);
+	//list1.add(4);   //can't update the list 
+	//System.out.println("list1: "+list1);
+	
+	//creating ArrayList is immutable by using unmodifiableList() method
+	List<Object> list3= Collections.unmodifiableList(list);
+	System.out.println("list3: "+list3);
+	//list3.add(4);   //can't update the list 
+	//System.out.println("list3: "+list3);
+	
+	
+	//same methods used for Map and Set interface
+	
 }
 }
