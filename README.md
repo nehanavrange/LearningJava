@@ -19,6 +19,45 @@ Table of contents
 SpringBoot
 ==========
 
+* What is framework?
+-> Framework contains prewritten codes in the form of APIs,library,jre,etc. And that is used by developers to create an application.
+
+-> it provides code reusability and save time.
+
+* ORM(Object Relational Mapping)
+-> mapping in the form of xml or annotaion based.
+
+-> used for CRUD operation.
+
+-> suppose from jdbc you want to store data in database.
+
+-> if one object want to store in database then that object have to convert into sql query by writting the query. then getting the record from database, we have ResultSet object. That ResultSet object is converted into object because our output should be in object form.
+
+-> means we have to map our object into SQL query and ResultSet again going to map with object.
+
+-> here all code is hardcoded in jdbc.
+
+-> But in ORM it gives facility to save,update,get,and delete object directly.
+
+-> means it is mapping class with table and varible with column directly. 
+
+* Association Mapping: (4 types):
+-> one To one
+
+-> one To many
+
+-> many To one
+
+-> many To many
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,10 +159,31 @@ OBject Oriented Programming system is a programming concept that work on princip
    EX: a capsule which is mixed of several medicine.
    
    
-     
+---------------------------------------------********************************------------------------------------------------------------------------------------------------------------------------- 
 
+* Marker interface:
+-> it is an empty interface which has no fields and methods.
 
+-> Example of marker interface is Serializable,Clonable,Remote interface.
 
+* Serializable interface: present in java.io.package.
+ 
+-> Serialization is a mechanism of converting state of an object into byte Stream.  
+
+-> DeSerialization is the reverse process of Serialization where byte stream is converted into object.
+
+-> So the advantage is byte stream is platform independent.
+
+-> means we can serialize an object on one platform and deserialize on another platform. 
+
+* Clonable interface:
+-> present in java.lang package.
+
+-> clone() method present in Object class. 
+
+-> implements Clonable interface java.lang.Object.clone() method.
+
+-> it is used to create a copy of an object.
 
 
 
@@ -759,7 +819,22 @@ This interface contains all the basic methods which every collection has like ad
        * if data is different it is store in same bucket.
         
     
-       
+* HashTable Vs ConcurrentHashMap:
+        
+1. HashTable:
+
+-> is an implementation of Map interface.
+
+-> this is legacy class in which all methods are synchronized.
+
+-> that's why it is thread-safe.
+
+-> it is similar to HashMap,store values in key-value pair but it is synchronized.
+
+-> doen't allow any null key/value.
+
+-> stores data based on hashCode value.
+
     
 
 Collections Class in Java
