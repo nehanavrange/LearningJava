@@ -7,6 +7,8 @@ class Operation extends Thread
 
 	AtomicInteger  c= new AtomicInteger(1);
 
+	//no need to make synchronized methods because read and write operations are done automatically by Atomic methods(like getAndIncrement,etc)
+	//so JVM ensure that another thread knows the updated value
 	public  void run() {
 		for(int i=0;i<10;i++) {
 			System.out.println("Thread " +this.getName()+" Number:"+c.getAndIncrement());

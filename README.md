@@ -186,6 +186,25 @@ OBject Oriented Programming system is a programming concept that work on princip
 -> it is used to create a copy of an object.
 
 
+Immutable class:
+================
+-> means once you created an object, we cannot change its content.
+
+-> Example: String,Boolean,Bye,Short classes are immutable.
+
+-> we can create our own immutable class also.
+
+-> by declaring class as final, so we can't extends that class.
+
+-> or by declaring all fields as private. so direct access can't allowed. 
+
+-> or not providing setter methods for variables,can not access outside the class..
+
+-> or make all fields as final, so that values cant change once intialized.
+
+
+
+
 
 DataStructure
 =============

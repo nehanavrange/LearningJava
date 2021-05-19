@@ -1,14 +1,17 @@
 package multithreading.volatiledemo;
 
 // not giving proper output without synchronization
+//used volatile when visibility problem have.
+//updated from cached memory
 class Operation extends Thread
 {
-	//Thread t;
 	//loading from cache memory if shared variable is not volatile, so it will not give consistent or proper data
 	// static int number=1; 
 	
 	//shared variable loading from main memory using volatile keyword, so that shared variable will not give inconsistent data
-	  volatile static int number=1;
+	 
+	//volatile keyword variable works with synchronized method mandatory
+	volatile static int number=1;
 
 	public synchronized void run() {
 		for(int i=0;i<10;i++) {
@@ -25,7 +28,7 @@ class Operation extends Thread
 
 
 
-public class RaceCondition {
+public class VolatileDemo {
 	public static void main(String[] args) throws InterruptedException {
 
 		Operation op1 = new Operation();
