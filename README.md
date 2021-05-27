@@ -162,7 +162,7 @@ OBject Oriented Programming system is a programming concept that work on princip
    EX: a capsule which is mixed of several medicine.
    
    
-----------------------------********************************-------------------------------------------------------------------------
+--------------------------------********************************-------------------------------------------------------
 
 * Marker interface:
 
