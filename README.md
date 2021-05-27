@@ -20,11 +20,13 @@ SpringBoot
 ==========
 
 * What is framework?
+
 -> Framework contains prewritten codes in the form of APIs,library,jre,etc. And that is used by developers to create an application.
 
 -> it provides code reusability and save time.
 
 * ORM(Object Relational Mapping)
+
 -> mapping in the form of xml or annotaion based.
 
 -> used for CRUD operation.
@@ -42,6 +44,7 @@ SpringBoot
 -> means it is mapping class with table and varible with column directly. 
 
 * Association Mapping: (4 types):
+
 -> one To one
 
 -> one To many
@@ -159,9 +162,10 @@ OBject Oriented Programming system is a programming concept that work on princip
    EX: a capsule which is mixed of several medicine.
    
    
----------------------------------------------********************************------------------------------------------------------------------------------------------------------------------------- 
+----------------------------********************************-------------------------------------------------------------------------
 
 * Marker interface:
+
 -> it is an empty interface which has no fields and methods.
 
 -> Example of marker interface is Serializable,Clonable,Remote interface.
@@ -177,6 +181,7 @@ OBject Oriented Programming system is a programming concept that work on princip
 -> means we can serialize an object on one platform and deserialize on another platform. 
 
 * Clonable interface:
+
 -> present in java.lang package.
 
 -> clone() method present in Object class. 
@@ -200,7 +205,26 @@ Immutable class:
 
 -> or not providing setter methods for variables,can not access outside the class..
 
--> or make all fields as final, so that values cant change once intialized.
+-> or make all fields as final, so that values can't change once intialized.
+
+
+Difference between String, StringBuffer and StringBuilder.
+==========================================================
+-> all are represent sequence of characters.
+
+-> But string is immutable class and remaining are mutable class.
+
+-> When we used string literal stores in String Constant Pool and when we used string with new keyword stores in Heap area.
+
+-> When we modify the String object, each time it creates new Object,it can't modify on same object.So performance wise slow and requires more memory.
+
+-> StringBuffer and StringBuilder stores in Heap Area and consume less memory because it modify on existing memory.
+
+-> String and StringBuilder is not thread-safe because of non-synchronized methods.
+
+-> StringBuffer is thread-safe because of synchronized methods.
+
+  
 
 
 
@@ -249,14 +273,12 @@ Singly linked list (SLL):
 * SLL has nodes with only one data field and next link field.
 * traversal can be done using the next node link only.
 * occupies less memory than DLL as it has only 2 fields.
+
 Doubly linked list (DLL):
 -------------------------
 * DLL has nodes with a data field, a previous link field and a next link field.
 * traversal can be done using the previous node link or the next node link.
 * occupies more memory than SLL as it has 3 fields.
-
-
-
 
 
 
