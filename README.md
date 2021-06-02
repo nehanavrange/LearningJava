@@ -176,7 +176,7 @@ OBject Oriented Programming system is a programming concept that work on princip
 
 -> DeSerialization is the reverse process of Serialization where byte stream is converted into object.
 
--> So the advantage is byte stream is platform independent.
+-> So the advantage of byte stream is platform independent.
 
 -> means we can serialize an object on one platform and deserialize on another platform. 
 
@@ -875,6 +875,25 @@ This interface contains all the basic methods which every collection has like ad
 -> doen't allow any null key/value.
 
 -> stores data based on hashCode value.
+
+* Comparable Vs Comparator:
+
+-> the thing which are comparable is called comparable.
+
+-> And if the thing not comparable then we can make it comparable by implementing Comparable or Comparator interface.
+
+-> for Example: All Integer or all String values are comparable we can directly sort without any issue using Collections.sort() method.
+
+-> Suppose Employee object want to sort then we have to implement our own logic by implementing Comparable or Comparator interface because Employee object can have many fields.   
+
+-> Comparable interface implements only actual or existing class we can't create comparable customize class.
+
+-> it has only one method compareTo(_);
+
+-> Comparator interface implements original class and can create its own comparator class also. so that this class is used in multiple places and no need to modify existing class everytime.
+
+-> it has compare(_,_); method
+
 
     
 
