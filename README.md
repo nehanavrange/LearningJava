@@ -167,6 +167,23 @@ OBject Oriented Programming system is a programming concept that work on princip
 
 Exception Handling:
 ===================
+Exception Handling is mainly used to handle the checked exceptions. If there occurs any unchecked exception such as NullPointerException,
+
+it is programmers' fault that he is not checking the code before it being used.
+
+Exception propagation :
+
+-> An exception is first thrown from the top of the stack and if it is not caught, 
+
+-> it drops down the call stack to the previous method.
+
+-> By default, Unchecked Exceptions are forwarded in calling chain (propagated).
+
+-> In case of Checked Exception and its mandatory to use throw keyword.
+
+-> By default only unchecked exceptions are propagated. Checked exceptions throw compilation error, if without declaring throws keyword.
+
+-> throws keyword describes that checked exceptions can be propagated by throws keyword.
 
 
 * Marker interface:
