@@ -12,7 +12,6 @@ Table of contents
    * [SpringBoot](#springboot)
    * [Serialization](#serialization)
   
-
 <!--te-->
 
 
