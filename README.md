@@ -186,6 +186,8 @@ Exception propagation :
 -> throws keyword describes that checked exceptions can be propagated by throws keyword.
 
 
+--------------------------------********************************-------------------------------------------------------
+
 * Marker interface:
 
 -> it is an empty interface which has no fields and methods.
