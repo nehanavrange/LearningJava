@@ -1,7 +1,7 @@
 package exceptionHandling;
 
-class NullPointerException extends RuntimeException {
-	NullPointerException(String str){
+class NullPointerException1 extends RuntimeException {
+	NullPointerException1(String str){
 		super(str);
 	}
 	
@@ -27,7 +27,7 @@ public class RunTimeExceptionDemo {
 		
 		
 		if(str.length()==0) {
-			throw new NullPointerException("string is null");
+			throw new NullPointerException1("string is null");
 			
 		}
 		else {

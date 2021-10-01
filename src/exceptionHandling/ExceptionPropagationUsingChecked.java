@@ -6,7 +6,7 @@ public class ExceptionPropagationUsingChecked {
 	// exception propagated to n()
 	void m() throws IOException
 	{
-		System.out.println("device error");
+	//	System.out.println("device error");
 
 
 		// checked exception occurred

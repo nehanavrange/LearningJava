@@ -6,7 +6,7 @@ public class LinkedHashMapProgm {
 
 	public static void main(String[] args) {
 		LinkedHashMap<Object, Object>lhm =new LinkedHashMap<>();
-		//maintaing insertion order
+		//maintaining insertion order
 		System.out.println(lhm.size());
 		System.out.println(lhm);
 		lhm.put("a", 97);

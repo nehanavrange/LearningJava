@@ -26,6 +26,59 @@ SpringBoot
 
 -> it provides code reusability and save time.
 
+
+* What is SpringBoot?
+
+-> It is a framework for Rapid Applicaton Development built on top of the Spring framework.
+
+-> we can say in simple words springboot is a combination of spring framwork and embedded servers. 
+
+* Why springboot is used?
+
+-> To design any spring application, a developer needs to taken care of manual set up on Hibernate data source, Entity management,Ssession factory, Transaction management everything.
+
+-> To design all those common set up, a developer doesn't need to define everything individualy, @SpringBootConfiguration annotation enough to manage everything at the time of deployment.
+
+-> It helps us creating efficient fast and stand-alone application.removes lot of configuration and dependencies.
+
+* Use of @SpringBootApplication annotation and ho it works internally?
+
+-> The  @SpringBootApplication annotation is equivalent to using @Configuration, @EnableAutoConfiguration, and @ComponentScan with their default attributes.
+
+-> Spring boot enables the developer to use a single annotaion instead of using multiple. But Spring provided loosely coupled features that we can ise for individual annotation as per our project.
+ 
+-> @Configuration: which helps you in identyfing  your beans for a  particular spring dependency injection.
+
+-> @EnableAutoConfiguration:helps you in auto scan. auto scan means if particular bean is available in class path it will be auto scan and added to its set of dependencies.  
+
+-> @ComponentScan: it is a places where we can scan our component or bean.
+
+
+* What are starter dependencies??
+
+-> Springboot starters are maven templates that contain a collection of relevant dependencies that are needed to start a particular functionality.
+ 
+-> we need to import is spring-bbot-starter-web dependency.
+
+-> in pom.xml
+
+   <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>2.5.4</version>
+    </dependency>
+
+-> it contains spring-webmvc, spring-web, hibernate-validator,tomcat-embed-core, tomcat-embed-el,tomcat-embed-websocket.
+
+* What is Spring Actuator? and its advantages?
+
+-> It is springboot feature which allows seeing inside a runing application.
+
+->   
+
+
+
+
 * ORM(Object Relational Mapping)
 
 -> mapping in the form of xml or annotaion based.

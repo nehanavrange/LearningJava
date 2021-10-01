@@ -47,7 +47,7 @@ public class TreeSetProgm  {
 		System.out.println(t2.size());
 		System.out.println(t2);
 		
-		//using lambda expression bcoz comparator r funtional interface
+		//using lambda expression bcoz comparator is funtional interface
 		TreeSet<EX> t3=new TreeSet<>(( o1,  o2)->
 		                     o2.getX() - o1.getX()
 									);
