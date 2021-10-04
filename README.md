@@ -45,7 +45,7 @@ SpringBoot
 
 -> The  @SpringBootApplication annotation is equivalent to using @Configuration, @EnableAutoConfiguration, and @ComponentScan with their default attributes.
 
--> Spring boot enables the developer to use a single annotaion instead of using multiple. But Spring provided loosely coupled features that we can ise for individual annotation as per our project.
+-> Spring boot enables the developer to use a single annotaion instead of using multiple. But Spring provided loosely coupled features that we can use for individual annotation as per our project.
  
 -> @Configuration: which helps you in identyfing  your beans for a  particular spring dependency injection.
 
@@ -74,7 +74,7 @@ SpringBoot
 
 -> It is springboot feature which allows seeing inside a runing application.
 
-->   
+-> It helps you monitor and manage your Spring Boot application by providing production-ready features like health check-up, auditing, metrics gathering, HTTP tracing etc.
 
 
 
