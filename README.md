@@ -284,6 +284,19 @@ Immutable class:
 
 -> or make all fields as final, so that values can't change once intialized.
 
+* Why String objects are immutable in Java?
+
+-> As Java uses the concept of String literal. Suppose there are 5 reference variables, all refer to one object "Sachin". 
+
+->If one reference variable changes the value of the object, it will be affected by all the reference variables. 
+
+-> That is why String objects are immutable in Java.
+
+* Why String class is Final in Java?
+
+-> The reason behind the String class being final is because no one can override the methods of the String class. So that it can provide the same features to the new String objects as well as to the old ones.
+
+
 
 Difference between String, StringBuffer and StringBuilder.
 ==========================================================
