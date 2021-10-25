@@ -11,7 +11,7 @@ import java.io.Serializable;
 class Demo implements  Serializable{
 
 	int a;
-	String b;
+	transient String b; //transient variable cannot be serialized
 	public Demo(int a, String b) {
 		super();
 		this.a = a;

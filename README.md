@@ -77,6 +77,50 @@ SpringBoot
 -> It helps you monitor and manage your Spring Boot application by providing production-ready features like health check-up, auditing, metrics gathering, HTTP tracing etc.
 
 
+* Core Concepts of Spring Security:
+
+1] Authentication: Process of identifying the person trying to access the application. means process of identifying the person is trusted or not.
+
+2] Authorization: Process of identifying if the person is allowed to do this operation.
+
+3] Principal: is the person that identified by authentication process. It is also called currently logged in user that we can store in session.
+
+4] Granted Authority: group of permissions which are allowed for a user.
+
+5] Roles: group of authority that are assigned together.
+
+   Ex: Role_User: login and search
+      
+       Role_Admin: login search and update            
+
+* How Spring Security is implemented?
+
+-> using basic default autentication which is done by Authentication Manager, by adding dependency of springboot-starter-security in pom.xml.
+
+-> In that, default username is "user" and password is auto-generated after running the application.
+ 
+-> we can provide our custom username and password by defining in application.properties file.
+
+-> Ex: spring.security.user.name=""
+
+       spring.security.user.password=""          
+
+* How to configure Authentication in Spring security (SS)?
+
+-> add springboot-starter-security dependency. 
+
+-> Extend WSCA(WebSecurityConfigureAdapter) in custom class and  use @EnableWebSecurity annotation.
+
+-> override configure(AMB(AuthenticationManagerBuilder)) method.
+
+-> configure type of authentication,user,pass and role.
+
+-> This will create and configure new AM(Authentication Manager) and now SS will use this AM instead of default one.
+
+-> For Authorization, override configure(HttpSercurity http) method.
+
+
+
 
 
 * ORM(Object Relational Mapping)
