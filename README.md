@@ -258,7 +258,30 @@ OBject Oriented Programming system is a programming concept that work on princip
    Binding data(States and behavior) into a single unit(Class).
       
    EX: a capsule which is mixed of several medicine.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JDK:
+====
+1. JIT is a part of JVM. JVM is a part of JRE.JRE is a part of JDK. 
+
+2. JDK is a java development kit. It provides development tools(java,javac,etc) and runtime enviornment. 
+
+   Development tool contain Compiler(javac) and runtime enviornment is JRE.
+
+3. JRE is a Java Runtime Enviornment. It provides only runtime enviornment,it doesn't provides any development tools. 
+  
+   Hence,JRE contains only JVM. Hence, we can execute only already developed application, not new application.
+
+4. JVM is a Java Virtual Machine. It is java platform. 
+
+   It provides interperter and JIT using which we can run java bytecode by converting them into current OS machine language.
    
+   It is used to excute bytecode.  
+   
+5. JIT stands for Just In  Time Compiler. It is responsible to help interpreter for executing java bytecode fast.
+
+   JIT is used to improve the performance of java program execution.
    
 --------------------------------********************************-------------------------------------------------------
 
